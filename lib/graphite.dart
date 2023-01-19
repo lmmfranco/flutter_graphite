@@ -245,7 +245,7 @@ class DirectGraph extends StatefulWidget {
   /// [onNodeSecondaryTapDown],[onNodeSecondaryTapUp] gesture events for nodes.
   /// See [GestureDetector] for details.
   DirectGraph({
-    super.key,
+    Key? key,
     required this.list,
     required this.defaultCellSize,
     required this.cellPadding,
@@ -290,7 +290,7 @@ class DirectGraph extends StatefulWidget {
     this.onNodePanDown,
     this.onNodeSecondaryTapDown,
     this.onNodeSecondaryTapUp,
-  });
+  }) : super(key: key);
 
   @override
   _DirectGraphState createState() => _DirectGraphState();
